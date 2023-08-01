@@ -1,0 +1,20 @@
+name: simple-clab-on-arm
+
+mgmt:
+  network: custom_mgmt
+  ipv4_subnet: 192.168.0.0/24
+
+topology:
+  kinds:
+    linux:
+      image: alpine:latest
+  defaults:
+    kind: linux
+  nodes:
+    node1:
+      kind: linux
+    node2:
+      kind: linux
+
+  links:
+    - endpoints: ["node1:eth1","node2:eth1"]

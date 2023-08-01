@@ -1,0 +1,38 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "clab-arm-test",
+	"build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "_CLAB_VERSION": "latest"
+        }
+    },
+    // "onCreateCommand": "sudo apt-get update; sudo apt-get install -y chromium",
+    "onCreateCommand": "docker import /home/vscode/tmp/ceos-lab-temp ceos-lab:latest; rm -rf /home/vscode/tmp/",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2.2.0": {
+            "version": "latest"
+        },
+        // add sshd to support gh cli codespace cp
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        }
+    },
+    // set minimum host requirements for cLab
+    "hostRequirements": {
+        "cpus": 4,
+        "memory": "8gb",
+        "storage": "32gb"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // various tools
+                "tuxtina.json2yaml",
+                "vscode-icons-team.vscode-icons",
+                "mutantdino.resourcemonitor"
+            ]
+        }
+    }
+}
