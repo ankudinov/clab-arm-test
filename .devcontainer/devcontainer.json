@@ -5,7 +5,7 @@
 	"build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "_CLAB_VERSION": "latest"
+            "_CLAB_VERSION": "0.43.0"
         }
     },
     // "onCreateCommand": "sudo apt-get update; sudo apt-get install -y chromium",
