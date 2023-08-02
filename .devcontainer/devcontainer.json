@@ -8,8 +8,6 @@
             "_CLAB_VERSION": "0.43.0"
         }
     },
-    // "onCreateCommand": "sudo apt-get update; sudo apt-get install -y chromium",
-    "onCreateCommand": "docker import /home/vscode/tmp/ceos-lab-temp ceos-lab:latest; rm -rf /home/vscode/tmp/",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2.2.0": {
             "version": "latest"
